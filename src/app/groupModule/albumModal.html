@@ -1,0 +1,23 @@
+<div class="modal-body"> <form name="register" ng-submit="vm.save()">
+        <div class="form-group">
+            <label class="control-label">Nazwa </label>
+            <input ng-model="vm.album.name" type="text" class="form-control" required="true"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Data powstania </label>
+            <input ng-model="vm.album.createdDate" type="text" class="form-control"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Opis </label>
+            <input ng-model="vm.album.description" type="text" class="form-control" />
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" ng-disabled="register.$invalid">Zapisz </button>
+            <button type="button" class="btn btn-danger" ng-click="$dismiss();"> Anuluj</button>
+        </div>
+        
+    </form>
+</div>

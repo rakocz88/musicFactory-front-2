@@ -8,7 +8,7 @@
             .module('register')
             .controller('RegisterController', RegisterController);
 
-    /** @ngInject */
+
     function RegisterController(UserDataService, $modal, $state) {
 
         var vm = this;
@@ -18,7 +18,7 @@
         vm.user.bands = [];
 
         function save() {
-            console.log(vm.user);
+ 
             UserDataService.save(vm.user);
              $state.go('login');
         }
@@ -28,12 +28,12 @@
                 templateUrl: 'app/registerModule/bandModal.html',
                 controller: 'BandRegisterModalController',
                 controllerAs: 'vm',
-                bindToController: true,
-                resolve: {
-                }
+                bindToController: true
+                
             });
-            modal.result.then(function (data) {
-                vm.user.bands.push(data);
+            modal.result.then(function (item) {
+       
+                vm.user.bands.push(item.data.id);
             });
         }
 

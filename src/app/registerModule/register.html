@@ -31,7 +31,7 @@
 
             <div class="form-group">
                 <label class="control-label">Hasło </label>
-                <input ng-model="vm.user.password" type="text" class="form-control" required="true"/>
+                <input ng-model="vm.user.password" type="password" class="form-control" required="true"/>
             </div>
 
             <div class="form-group">
@@ -39,10 +39,13 @@
                 <input ng-model="vm.user.description" type="text" class="form-control"/>
             </div>
             
-            <div ng-repeat="band in vm.user.bands track by $index">
+             <div ng-repeat="band in vm.user.bands track by $index">
                 {{item}}
             </div>
             {{vm.user.bands}}
+            
+      
+           
             
             <div class="form-group">
                 <button type="button" ng-click="vm.openBandModal()" class="btn btn-sm btn-info">Dodaj zespoł</button>
