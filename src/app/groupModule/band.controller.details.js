@@ -22,8 +22,10 @@
         }
         
         function viewAlbum(album){
-            console.log(album)
-            $state.go("album",{albumId: album.id});
+            console.log("IDS");
+            console.log(album.id);
+            console.log(band.id);
+            $state.go("album",{albumId: album.id, bandId: vm.band.id});
         }
 
         function addAlbum() {

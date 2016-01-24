@@ -13,7 +13,9 @@
             getOne: getOne,
             getAlbumsForOne: getAlbumsForOne,
             createAlbum: createAlbum,
-            getAlbum:getAlbum
+            getAlbum: getAlbum,
+            getAlbumSongs:getAlbumSongs,
+            getSong:getSong
         });
 
         function registerBand(band) {
@@ -43,10 +45,17 @@
 
         function getAlbum(albumId) {
             //TODO FIX PASS PARAM 
-            console.log("ALBUM ID");
-            console.log(albumId);
-            return $http.get('http://localhost:9999/album/'+albumId);
+            return $http.get('http://localhost:9999/album/' + albumId);
+        }
 
+        function getAlbumSongs(albumId) {
+            //TODO FIX PASS PARAM 
+            return $http.get('http://localhost:9999/album/' + albumId+'/songs');
+        }
+        
+          function getSong(songId) {
+            //TODO FIX PASS PARAM 
+            return $http.get('http://localhost:9999/song/' + songId);
         }
 
 

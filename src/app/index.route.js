@@ -1,10 +1,8 @@
 (function () {
     'use strict';
-
     angular
             .module('frontend')
             .config(routerConfig);
-
     /** @ngInject */
     function routerConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
@@ -40,7 +38,6 @@
                     resolve: {
                         bands: function (BandService) {
                             return BandService.byUser();
-
                         }
                     }
                 })
@@ -52,7 +49,6 @@
                     resolve: {
                         band: function (BandService, $stateParams) {
                             return BandService.getOne($stateParams.bandId);
-
                         },
                         albums: function (BandService, $stateParams) {
                             return BandService.getAlbumsForOne($stateParams.bandId);
@@ -65,13 +61,36 @@
                     controller: 'AlbumDetailsController',
                     controllerAs: 'vm',
                     resolve: {
+                        band: function (BandService, $stateParams) {
+                            return BandService.getOne($stateParams.bandId);
+                        },
                         album: function (BandService, $stateParams) {
-                     
                             return BandService.getAlbum($stateParams.albumId);
+                        },
+                        songs: function (BandService, $stateParams) {
+                            return BandService.getAlbumSongs($stateParams.albumId);
+                        }
+                    }
+                })
+
+                .state('song', {
+                    url: '/band/{bandId}/album/{albumId}/song/{songId}',
+                    templateUrl: 'app/groupModule/song.details.html',
+                    controller: 'SongDetailsController',
+                    controllerAs: 'vm',
+                    resolve: {
+                        album: function (BandService, $stateParams) {
+                            return BandService.getAlbum($stateParams.albumId);
+                        },
+                        band: function (BandService, $stateParams) {
+               
+                            return BandService.getOne($stateParams.bandId);
+                        },
+                        song: function (BandService, $stateParams) {
+                            return BandService.getSong($stateParams.songId);
                         }
                     }
                 });
-
         $urlRouterProvider.otherwise('/login');
     }
 

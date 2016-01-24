@@ -16,7 +16,7 @@
         
         function logIn(){
             LoginService.save(vm.logUser).$promise.then(function(success){
-                $state.go('fileUpload');
+                $state.go('bands');
             }, function(error){
                 alert("błąd w logowaniu");
             });

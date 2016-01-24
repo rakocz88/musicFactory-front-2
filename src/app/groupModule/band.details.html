@@ -1,39 +1,46 @@
 <div class="page-header">
-    
+<div class="well panelm">
     <h1>{{vm.band.name}}</h1>
     <h2>{{vm.band.gengre}}</h2>
+</div>
 
-    <div class="well">
-        <h3> Dane zespołu </h3>
-        <p> Rok założenia : {{vm.band.createdDate}}</p>
-        <p> Miejsce założenia : {{vm.band.createdPlace}} </p>
-        <p> Gatunek : {{vm.band.gengre}} </p>
-        <p> Opis : {{vm.band.description}} </p>
-        <div class="text-center">
-            <input type="button" ng-click="vm.editData" class="btn btn-default" value="Edytuj" /> 
-        </div>
+    <div class="well panelf">
+      
+            <h3> Dane zespołu </h3>
+            <p> Rok założenia : {{vm.band.createdDate}}</p>
+            <p> Miejsce założenia : {{vm.band.createdPlace}} </p>
+            <p> Gatunek : {{vm.band.gengre}} </p>
+            <p> Opis : {{vm.band.description}} </p>
+            <div class="text-center">
+                <input type="button" ng-click="vm.editData" class="btn btn-primary" value="Edytuj" /> 
+            </div>
+       
     </div>
-    
-      <div class="well">
-        <h3> Członkowie zespołu </h3>
-   
-         <div class="" ng-repeat="item in vm.band.users">
-            <a href="#" ng-click="vm.showUser(item)">{{item}} </a>
-            
+        <div class="well panelf">
+           
+                <h3> Członkowie zespołu </h3>
+
+                <div class="" ng-repeat="item in vm.band.users">
+                    <a href="#" ng-click="vm.showUser(item)">{{item}} </a>
+
+                </div>
+                <div class="text-center">
+                    <input type="button" ng-click="vm.editMembers()" class="btn btn-primary" value="Edytuj" /> 
+                </div>
+         
         </div>
-         <div class="text-center">
-            <input type="button" ng-click="vm.editMembers()" class="btn btn-default" value="Edytuj" /> 
+
+        <div class="well panelf">
+           
+                <h3> Albumy </h3>
+
+                <div class="" ng-repeat="item in vm.band.albums">
+                    <a  ng-click="vm.viewAlbum(item)">{{item.name}}</a>
+                </div>
+                <div class="text-center">
+                    <input type="button" ng-click="vm.addAlbum()" class="btn btn-primary" value="Dodaj" /> 
+                </div>
+          
         </div>
-    </div>
-    
-    <div class="well">
-        <h3> Albumy </h3>
-        {{vm.band}}
-         <div class="" ng-repeat="item in vm.band.albums">
-             <button  ng-click="vm.viewAlbum(item)">{{item.name}}</a>
-        </div>
-         <div class="text-center">
-            <input type="button" ng-click="vm.addAlbum()" class="btn btn-default" value="Dodaj" /> 
-        </div>
-    </div>
+
 </div>

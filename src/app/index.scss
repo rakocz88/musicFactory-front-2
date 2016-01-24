@@ -27,6 +27,43 @@ $icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/"
   }
 }
 
+div.upload {
+    width: 157px;
+    height: 57px;
+    background-color: #008000;
+    overflow: hidden;
+}
+
+body{
+    background-color: #C0D9F0;
+    background: linear-gradient(to right, #C0D9F0 , #36FFAB);
+}
+
+.panelf{
+     background: linear-gradient(to bottom right, #CDE86D , #FFFFAD);
+     box-shadow: 10px 10px grey;
+     border-color: black;
+       font-family: cursive;
+       color: black;
+    //background-color: #E8FC9F!important;
+}
+
+.panelm{
+    @extend .panelf;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    h1{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: cursive;
+    }
+     h2{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-family: cursive;
+    }
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

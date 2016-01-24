@@ -1,0 +1,25 @@
+<div class="modal-body"> <form name="register" ng-submit="vm.save()">
+        <div class="form-group">
+            <label class="control-label">Nazwa </label>
+            <input ng-model="vm.song.name" type="text" class="form-control" required="true"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label">Opis </label>
+            <input ng-model="vm.song.description" type="text" class="form-control"/>
+        </div>
+
+        <div class="text-center">
+            <input type="file" file-model="myFile" name="upload"/>
+        </div>
+
+
+
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary" ng-disabled="register.$invalid">Zapisz </button>
+            <button type="button" class="btn btn-danger" ng-click="$dismiss();"> Anuluj</button>
+        </div>
+
+    </form>
+</div>
