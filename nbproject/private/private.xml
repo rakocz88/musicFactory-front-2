@@ -3,11 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/index.scss</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/registerModule/register.html</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/band.service.js</file>
             <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/album.details.html</file>
-            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/band.controller.details.js</file>
-            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/addAlbum.modal.ctrl.js</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/loginModule/login.html</file>
             <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/album.details.ctrl.js</file>
             <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/band.details.html</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/components/tglNavbar/navbar.html</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/song.details.html</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/loginModule/login.ctrl.js</file>
+            <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/groupModule/band.html</file>
             <file>file:/E:/inzynierski/frontend/musicFactory-front-2/src/app/index.route.js</file>
         </group>
     </open-files>

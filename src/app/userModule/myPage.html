@@ -1,0 +1,34 @@
+<div class="page-header">
+<div class="well panelm">
+    
+    <h1>Moja strona</h1>
+    <h3>{{vm.user.firstName}} {{vm.user.lastName}}</h3>
+</div>
+
+    <div class="well panelf">
+      
+            <h3>Dane osobowe</h3>
+            <p> Imię : {{vm.user.firstName}}</p>
+            <p> Nazwisko : {{vm.user.lastName}} </p>
+            <p> Miejsce urodzenia : {{vm.user.birthPlace}} </p>
+            <p> Data urodzenia : {{vm.user.birtDate}} </p>
+<!--            <div class="text-center">
+                <input type="button" ng-click="vm.editData" class="btn btn-primary" value="Edytuj" /> 
+            </div>-->
+       
+    </div>
+    
+    
+    <div class="well panelf">
+            <h3>Opis</h3>
+            <p> {{vm.user.description}}</p>
+    </div>
+    
+        <div class="well panelf">
+            <h3>Zespoły</h3>
+            <div ng-repeat="item in vm.user.bands track by $index">
+            <p>{{$index+1}} {{item.name}}  -  {{item.gengre}}</p>
+            </div>
+    </div>
+       
+</div>

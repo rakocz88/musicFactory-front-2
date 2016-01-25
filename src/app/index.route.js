@@ -3,7 +3,7 @@
     angular
             .module('frontend')
             .config(routerConfig);
-    /** @ngInject */
+
     function routerConfig($stateProvider, $urlRouterProvider) {
         $stateProvider
                 .state('login', {
@@ -89,6 +89,20 @@
                         song: function (BandService, $stateParams) {
                             return BandService.getSong($stateParams.songId);
                         }
+                    }
+                })
+                .state('myPage', {
+                    url: '/myPage',
+                    templateUrl: 'app/userModule/myPage.html',
+                    controller: 'MyPageController',
+                    controllerAs: 'vm',
+                    resolve: {
+                          user: function (UserDataService) {
+                              console.log(UserDataService.getSessionUser());
+                            return UserDataService.getSessionUser();
+                        }
+
+                     
                     }
                 });
         $urlRouterProvider.otherwise('/login');

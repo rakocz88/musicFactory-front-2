@@ -5,13 +5,18 @@
     .module('userModule')
     .service('UserDataService', userService);
 
-  /** @ngInject */
-  function userService($resource) {
-     var registerUserService = $resource('http://localhost:9999/user/create',{},{
-         create : {
-             method: 'POST'
-         }
-     });
-    return registerUserService;
+  function userService($http) {
+      return({
+          registerUserService:registerUserService,
+          getSessionUser : getSessionUser
+      });
+      
+      function registerUserService(user){
+          $http.post('http://localhost:9999/user/create', user);
+      }
+      
+       function getSessionUser(){
+          return $http.get('http://localhost:9999/user/details');
+      }
   }
 })();
