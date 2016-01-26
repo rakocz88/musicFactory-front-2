@@ -8,7 +8,7 @@
             .module('loginModule')
             .controller('LoginController', LoginController);
 
-    /** @ngInject */
+
     function LoginController(LoginService, $state) {
         
         var vm = this;

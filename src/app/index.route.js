@@ -115,6 +115,14 @@
                         }
                     }
 //                 
+                })
+                  .state('searchBands', {
+                    url: '/searchUsers',
+                    templateUrl: 'app/searchModule/searchBands.html',
+                    controller: 'SearchBandCtrl',
+                    controllerAs: 'vm'
+                 
+//                 
                 });
         $urlRouterProvider.otherwise('/login');
     }
