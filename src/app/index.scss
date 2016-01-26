@@ -64,6 +64,18 @@ body{
     }
 }
 
+.modal-content{
+     @extend .panelf;
+}
+
+a{
+    color: #49595E!important;
+}
+
+.m-b-10{
+    margin-bottom: 10px
+}
+
 /**
  *  Do not remove the comments below. It's the markers used by gulp-inject to inject
  *  all your sass files automatically

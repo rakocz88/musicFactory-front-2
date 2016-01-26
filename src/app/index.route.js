@@ -83,7 +83,7 @@
                             return BandService.getAlbum($stateParams.albumId);
                         },
                         band: function (BandService, $stateParams) {
-               
+
                             return BandService.getOne($stateParams.bandId);
                         },
                         song: function (BandService, $stateParams) {
@@ -97,13 +97,24 @@
                     controller: 'MyPageController',
                     controllerAs: 'vm',
                     resolve: {
-                          user: function (UserDataService) {
-                              console.log(UserDataService.getSessionUser());
+                        user: function (UserDataService) {
                             return UserDataService.getSessionUser();
                         }
 
-                     
+
                     }
+                })
+                .state('addUser', {
+                    url: '/addUser/{bandId}',
+                    templateUrl: 'app/groupModule/userAdd.html',
+                    controller: 'UserAddController',
+                    controllerAs: 'vm',
+                    resolve: {
+                        band: function (BandService, $stateParams) {
+                            return BandService.getOne($stateParams.bandId);
+                        }
+                    }
+//                 
                 });
         $urlRouterProvider.otherwise('/login');
     }

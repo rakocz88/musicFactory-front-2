@@ -15,7 +15,9 @@
             createAlbum: createAlbum,
             getAlbum: getAlbum,
             getAlbumSongs:getAlbumSongs,
-            getSong:getSong
+            getSong:getSong,
+            getFilteredUsers:getFilteredUsers,
+            addNewMember:addNewMember
         });
 
         function registerBand(band) {
@@ -56,6 +58,14 @@
           function getSong(songId) {
             //TODO FIX PASS PARAM 
             return $http.get('http://localhost:9999/song/' + songId);
+        }
+        
+        function getFilteredUsers(userFilter){
+            return $http.get('http://localhost:9999/user/filter?login='+userFilter.login+'&firstName='+userFilter.firstName+'&lastName='+userFilter.lastName);
+        }
+        
+        function addNewMember(userBand){
+             return $http.post('http://localhost:9999/band/addToBand', userBand);
         }
 
 

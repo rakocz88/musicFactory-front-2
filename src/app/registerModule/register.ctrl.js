@@ -19,7 +19,7 @@
 
         function save() {
  
-            UserDataService.save(vm.user);
+            UserDataService.registerUserService(vm.user);
              $state.go('login');
         }
 

@@ -8,7 +8,8 @@
   function userService($http) {
       return({
           registerUserService:registerUserService,
-          getSessionUser : getSessionUser
+          getSessionUser : getSessionUser,
+          getUserFilter:getUserFilter
       });
       
       function registerUserService(user){
@@ -17,6 +18,10 @@
       
        function getSessionUser(){
           return $http.get('http://localhost:9999/user/details');
+      }
+      
+       function getUserFilter(login, firstName, lastName){
+          return $http.get('http://localhost:9999/user/filter?login='+login+'&firstName='+firstName+'&lastName='+lastName).$promise;
       }
   }
 })();

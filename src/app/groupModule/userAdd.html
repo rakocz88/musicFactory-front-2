@@ -1,0 +1,40 @@
+<div class="page-header">
+    <div class="well panelm"> 
+        <h1>Dodaj użytkownika do zespołu</h1>
+    </div>
+
+    <div class="well panelm"> 
+        <h3>Filtry</h3>
+        <div class="col-md-3">
+            <label>Login </label>
+            <input type="text" ng-model="vm.filter.login"/>
+        </div>
+        <div class="col-md-3">
+            <label>Imie </label>
+            <input type="text" ng-model="vm.filter.firstName"/>
+        </div>
+        <div class="col-md-4">
+            <label>Nazwisko </label>
+            <input type="text" ng-model="vm.filter.lastName"/>
+        </div>
+        <div>
+            <input type="button" ng-click="vm.search()" value="Szukaj" />
+        </div>
+        </div>
+    </div>
+
+ <table class="table panelf">
+            <tr>
+            <th>Login</th>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            </tr>
+            <tr ng-repeat="item in vm.users">
+                <td>{{item.login}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td><input type="button" class="btn btn-sm btn-primary " ng-click="vm.addToBand(item)" value="opcje" /></td>
+            </tr>
+            
+        </table>
+</div>

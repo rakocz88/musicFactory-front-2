@@ -19,7 +19,7 @@
             <h3> Utwory </h3>
 
             <div class="" ng-repeat="item in vm.songs">
-                <a ng-click="vm.showSong(item.id)">{{item.name}} </a>
+                <a ng-click="vm.showSong(item.id)">{{$index}} {{item.name}} </a>
 
             </div>
             <div class="text-center">
